@@ -2,19 +2,19 @@ import React, { Component } from "react";
 import Menu from "./MenuComponent";
 import DishDetail from "./DishdetailComponent";
 import { DISHES } from "../shared/dishes";
+import { COMMENTS } from "../shared/comments";
+import { PROMOTIONS } from "../shared/promotions";
+import { LEADERS } from "../shared/leaders";
 import Header from "./HeaderComponent";
 import Footer from "./FooterComponent";
 import Home from "./HomeComponent";
 import { Switch, Route, Redirect } from "react-router-dom";
-import { COMMENTS } from "../shared/comments";
-import { PROMOTIONS } from "../shared/promotions";
-import { LEADERS } from "../shared/leaders";
 import Contact from "./ContactComponent";
+import About from "./AboutComponent";
 
 class Main extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
       dishes: DISHES,
       comments: COMMENTS,
@@ -67,6 +67,11 @@ class Main extends Component {
           />
           <Route path="/menu/:dishId" component={DishWithId} />
           <Route exact path="/contactus" component={Contact} />
+          <Route
+            exact
+            path="/aboutus"
+            component={() => <About leaders={this.state.leaders} />}
+          />
           <Redirect to="/home" />
         </Switch>
         {/* <Menu
