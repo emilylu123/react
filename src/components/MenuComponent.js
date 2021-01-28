@@ -4,7 +4,9 @@ import { Card, CardImg, CardImgOverlay, CardTitle } from "reactstrap";
 // Turn into a functional component
 function RenderMenuItem({ dish, onClick }) {
   return (
-    <Card key={dish.id} onClick={() => onClick(dish.id)}>
+    // delete onclick
+    // <Card key={dish.id} onClick={() => onClick(dish.id)}>
+    <Card key={dish.id}>
       <CardImg width="100%" src={dish.image} alt={dish.name} />
       <CardImgOverlay>
         <CardTitle>{dish.name}</CardTitle>
