@@ -23,3 +23,10 @@ yarn-debug.log*
 yarn-error.log*
 
 .eslintcache
+.idea/confusion.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/.gitignore
+.idea/codeStyles/codeStyleConfig.xml
+.idea/inspectionProfiles/Project_Default.xml
