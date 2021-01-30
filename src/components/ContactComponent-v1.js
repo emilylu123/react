@@ -28,7 +28,6 @@ class Contact extends Component {
         this.handleBlur = this.handleBlur.bind(this);
     }
 
-    // 
     handleInputChange(event) {
         const target = event.target;
         const value = target.type === "checkbox" ? target.checked : target.value;
