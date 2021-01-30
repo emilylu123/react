@@ -25,14 +25,13 @@ class Contact extends Component {
 		});
 	}
 
-	handleSubmit(event) {
-		console.log("Current State is: " + JSON.stringify(this.state));
-		alert("Current State is: " + JSON.stringify(this.state));
+	handleSubmit(values) {
+		console.log("Current State is: " + JSON.stringify(values));
+		alert("Current State is: " + JSON.stringify(values));
 		// event.preventDefault();
 	}
 
 	render() {
-		const errors = this.validate(this.state.firstname, this.state.lastname, this.state.telnum, this.state.email);
 		return (
 			<div className="container">
 				<div className="row">
